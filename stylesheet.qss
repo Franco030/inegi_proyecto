@@ -1,0 +1,125 @@
+/* stylesheet.qss */
+
+/* Estilo base para todas las ventanas y widgets */
+QWidget {
+    background-color: #2E2F30; /* Fondo gris oscuro */
+    color: #E0E0E0; /* Texto claro */
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+}
+
+/* Pestaña principal (Dashboard) */
+QTabWidget::pane {
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+QTabBar::tab {
+    background-color: #3C3D3E;
+    color: #B0B0B0;
+    padding: 10px 20px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border: 1px solid #333;
+    border-bottom: none;
+}
+QTabBar::tab:selected {
+    background-color: #007ACC; /* Azul brillante para la pestaña seleccionada */
+    color: #FFFFFF;
+}
+QTabBar::tab:!selected:hover {
+    background-color: #4A4B4C;
+}
+
+/* Pestañas internas (Catálogos) */
+QTabWidget[objectName="catalogo_tabs"] QTabBar::tab {
+    background-color: #2E2F30;
+    color: #B0B0B0;
+    padding: 8px 15px;
+    border: 1px solid #444;
+    border-bottom: none;
+}
+QTabWidget[objectName="catalogo_tabs"] QTabBar::tab:selected {
+    background-color: #4A4B4C;
+    color: #FFFFFF;
+    border-bottom: 1px solid #4A4B4C; /* Oculta el borde inferior */
+}
+
+/* Botones */
+QPushButton {
+    background-color: #007ACC;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+QPushButton:hover {
+    background-color: #008CFF;
+}
+QPushButton:pressed {
+    background-color: #006ABF;
+}
+
+/* Botones de eliminación (Estilo de advertencia) */
+QPushButton[objectName="btn_eliminar"] {
+    background-color: #C0392B; /* Rojo */
+}
+QPushButton[objectName="btn_eliminar"]:hover {
+    background-color: #E74C3C;
+}
+QPushButton[objectName="btn_eliminar"]:pressed {
+    background-color: #A93226;
+}
+
+/* Entradas de texto y ComboBox */
+QLineEdit, QComboBox, QTextEdit {
+    background-color: #3C3D3E;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 5px;
+}
+QComboBox::drop-down {
+    border: none;
+}
+QComboBox::down-arrow {
+    image: url(:/qt-project.org/styles/commonstyle/images/down-arrow-on-16.png);
+}
+
+/* Tablas */
+QTableWidget {
+    background-color: #3C3D3E;
+    gridline-color: #555;
+    border: 1px solid #555;
+}
+QHeaderView::section {
+    background-color: #4A4B4C;
+    color: #E0E0E0;
+    padding: 5px;
+    border: 1px solid #555;
+}
+QTableWidget::item:selected {
+    background-color: #007ACC;
+    color: #FFFFFF;
+}
+
+/* Gráficos (PyQtGraph) - Fondo blanco ya lo pusimos en el código */
+PlotWidget {
+    border-radius: 4px;
+    border: 1px solid #555;
+}
+
+/* Cajas de Grupo */
+QGroupBox {
+    color: #00BFFF; /* Color de título azul claro */
+    font-weight: bold;
+    font-size: 11pt;
+    border: 1px solid #555;
+    border-radius: 6px;
+    margin-top: 12px; /* Espacio para el título */
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px 5px 10px;
+    left: 10px;
+}
