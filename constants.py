@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 # You can define the connection string as a constant
 DB_CONNECTION_STRING = "mysql+pymysql://franquito:edwin@localhost:3306/inegi"
 ASSISTANT_CONNECTION_STRING = "mysql+pymysql://assistant:edwin@localhost:3306/inegi"
-GEMINI_API_KEY = "AIzaSyAFH3PjHBDT1zltBDtjH0nSZgOWdckrXDc"
+GEMINI_API_KEY = ""
 
 
 # You can define the engine object itself as a constant
